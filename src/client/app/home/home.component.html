@@ -1,0 +1,9 @@
+
+<form (submit)="search(searchRef.target.value)">
+  <input #searchRef (input)="term$.next($event.target.value)" name="term" placeholder="Search">
+  <button type="submit">Search</button>
+</form>
+
+<div *ngIf="results">
+  {{results | json}}
+</div>
