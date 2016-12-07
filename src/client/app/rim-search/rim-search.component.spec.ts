@@ -15,7 +15,7 @@ import { MockBackend } from '@angular/http/testing';
 import { Subject } from 'rxjs/Subject';
 
 import { RimSearchService } from '../shared/index';
-import { HomeModule } from './home.module';
+import { RimSearchModule } from './rim-search.module';
 
 export function main() {
   describe('Home component', () => {
@@ -23,7 +23,7 @@ export function main() {
     // Disable old forms
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [FormsModule, RouterModule, HttpModule, HomeModule],
+        imports: [FormsModule, RouterModule, HttpModule, RimSearchModule],
         declarations: [TestComponent],
         providers: [
           RimSearchService,
@@ -51,7 +51,6 @@ export function main() {
 
             expect(homeDOMEl.querySelectorAll('li').length).toEqual(0);
 
-
             fixture.detectChanges();
 
             expect(homeInstance.rimSearch).toEqual(jasmine.any(RimSearchService));
@@ -64,6 +63,6 @@ export function main() {
 
 @Component({
   selector: 'test-cmp',
-  template: '<sd-home></sd-home>'
+  template: '<rim-search></rim-search>'
 })
 class TestComponent { }

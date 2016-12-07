@@ -13,7 +13,7 @@ import {
   RouterTestingModule
 } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { RimSearchComponent } from './rim-search/rim-search.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 
 export function main() {
@@ -21,14 +21,14 @@ export function main() {
   describe('App component', () => {
 
     let config: Route[] = [
-      { path: '', component: HomeComponent },
+      { path: '', component: RimSearchComponent },
     ];
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [FormsModule, RouterTestingModule.withRoutes(config)],
         declarations: [TestComponent, ToolbarComponent,
           AppComponent,
-          HomeComponent],
+          RimSearchComponent],
         providers: [
           { provide: APP_BASE_HREF, useValue: '/' }
         ]

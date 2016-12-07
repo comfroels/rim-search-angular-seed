@@ -6,15 +6,15 @@ import 'rxjs/add/operator/debounceTime';
 import { RimSearchService } from '../shared/index';
 
 /**
- * This class represents the lazy loaded HomeComponent.
+ * This class represents the lazy loaded RimSearchComponent.
  */
 @Component({
   moduleId: module.id,
-  selector: 'sd-home',
-  templateUrl: 'home.component.html',
-  styleUrls: ['home.component.css'],
+  selector: 'rim-search',
+  templateUrl: 'rim-search.component.html',
+  styleUrls: ['rim-search.component.css'],
 })
-export class HomeComponent {
+export class RimSearchComponent {
 
   term$ = new Subject<string>();
   results: any;
